@@ -1,21 +1,31 @@
 
+//#define DEBUG
 
 #include "Int.cpp"
+#include <conio.h>
+
 
  
 int main()
 {
-	Int a = _I64_MAX , b = 64 , c ;
-	a.printdata();
-	b.printdata();
+	Int a = fromString("9,223,372,036,854,775,807") , b = 10 , c ;
+	cout << " a : " << a << " , b : " << b << endl ;
+	cout << " addition : " ;
 	c = a + b ;
-	//c = c + a;
-	c.printdata();
-	
-	c = a << 65;
-	c.printdata();
-	c = c >> 90;
-	c.printdata();
-	c = a * b ;
-	c.printdata();
+	cout << c << endl;
+	cout << " subtraction : " ;
+	c = a - b ;
+	cout << c << endl;
+	cout << " right shift : " ;
+	c = a << 2;
+	cout << c << endl;
+	cout << " left shift : " ;
+	c = a >> 2;
+	cout << c << endl;
+	cout << " multiplication : " ;
+	c = a * b;
+	cout << c << endl;
+	cout << " division : " ;
+	c = a / b;
+	cout << c << endl;
 }
